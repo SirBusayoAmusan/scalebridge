@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Submit an Opportunity | ScaleBridge</title>
+<meta name="description" content="Submit a financing opportunity to Scalebridge in five short steps: the opportunity, repayment, stage, documents and contact details.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">SCALEBRIDGE</a>
+    <div class="nav-links">
+      <a href="what-we-do.html" class="navlink">What We Do</a>
+      <a href="for-businesses.html" class="navlink">For Businesses</a>
+      <a href="for-capital-partners.html" class="navlink">For Capital Partners</a>
+      <a href="about.html" class="navlink">About</a>
+      <a href="insights.html" class="navlink">Insights</a>
+    </div>
+    <div class="nav-actions">
+      <a href="become-a-capital-partner.html" class="nav-underline">Become a Capital Partner</a>
+      <a href="submit-an-opportunity.html" class="btn btn-primary btn-sm" style="background:#201e1d;">Submit an Opportunity</a>
+    </div>
+  </nav>
+  <div id="submit-success" style="display:none; padding:clamp(5rem,12vw,9rem) clamp(1.25rem,5vw,3rem); max-width:760px; margin:0 auto; text-align:left;">
+    <div style="font-size:0.78rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:#ae1800; margin-bottom:1rem;">Submitted</div>
+    <h1 style="font-weight:800; font-size:clamp(2rem,3.6vw,2.8rem); line-height:1.1; margin:0 0 1.2rem;">Your opportunity has been received.</h1>
+    <p style="font-size:1rem; line-height:1.65; color:rgba(32,30,29,0.75); max-width:36rem; margin:0 0 2rem;">Our origination team will review the details and follow up within a few business days regarding next steps in our assessment process.</p>
+    <a href="index.html" class="btn btn-dark">Return to Homepage</a>
+  </div>
+
+  <div id="submit-form-wrap">
+    <section style="padding:clamp(2.5rem,5vw,3.5rem) clamp(1.25rem,5vw,3rem) 0;">
+      <div style="max-width:760px; margin:0 auto;">
+        <div style="font-size:0.78rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:#ae1800; margin-bottom:0.8rem;">Submit an Opportunity</div>
+        <h1 style="font-weight:800; font-size:clamp(1.9rem,3.4vw,2.6rem); line-height:1.1; margin:0 0 1.6rem;">Tell us about the transaction.</h1>
+        <div class="step-bar-track" id="step-bar">
+          <div class="step-bar-seg" data-n="1"></div>
+          <div class="step-bar-seg" data-n="2"></div>
+          <div class="step-bar-seg" data-n="3"></div>
+          <div class="step-bar-seg" data-n="4"></div>
+          <div class="step-bar-seg" data-n="5"></div>
+        </div>
+        <div style="font-size:0.78rem; font-weight:700; color:rgba(32,30,29,0.6); margin-bottom:2rem;" id="step-label">Step 1 of 5 &mdash; The Opportunity</div>
+      </div>
+    </section>
+
+    <section style="padding:0 clamp(1.25rem,5vw,3rem) clamp(4rem,8vw,6rem);">
+      <div style="max-width:760px; margin:0 auto;">
+
+        <div id="step-1" class="step-panel" style="display:flex; flex-direction:column; gap:2rem;">
+          <div>
+            <label class="form-label" style="font-size:0.95rem; margin-bottom:0.8rem;">What are you seeking financing for?</label>
+            <div style="display:flex; flex-direction:column; gap:0; border-top:1px solid rgba(32,30,29,0.4);" id="financing-options"></div>
+          </div>
+          <div>
+            <label class="form-label" style="font-size:0.95rem; margin-bottom:0.8rem;">How much capital do you require?</label>
+            <div style="display:flex; flex-direction:column; gap:0; border-top:1px solid rgba(32,30,29,0.4);" id="amount-options"></div>
+          </div>
+        </div>
+
+        <div id="step-2" class="step-panel" style="display:none; flex-direction:column; gap:1.4rem;">
+          <div>
+            <label class="form-label">What is the source of repayment?</label>
+            <textarea class="sb-input" id="repayment" rows="4" style="resize:vertical;" placeholder="e.g. contract receivables, project revenue, business cash flow"></textarea>
+          </div>
+          <div>
+            <label class="form-label">Who is the primary counterparty / customer?</label>
+            <input class="sb-input" type="text" id="counterparty" placeholder="e.g. government agency, corporate off-taker"/>
+          </div>
+        </div>
+
+        <div id="step-3" class="step-panel" style="display:none;">
+          <label class="form-label" style="font-size:0.95rem; margin-bottom:0.8rem;">What stage is the transaction?</label>
+          <div style="display:flex; flex-direction:column; gap:0; border-top:1px solid rgba(32,30,29,0.4);" id="stage-options"></div>
+        </div>
+
+        <div id="step-4" class="step-panel" style="display:none;">
+          <label class="form-label" style="font-size:0.95rem; margin-bottom:0.8rem;">Upload supporting documents</label>
+          <p style="font-size:0.88rem; color:rgba(32,30,29,0.65); margin:0 0 1rem;">Contracts, LPOs, financials or any documentation that supports the opportunity. Optional at this stage.</p>
+          <label class="file-drop">
+            <span style="font-weight:800; font-size:0.92rem;">Choose files</span>
+            <span style="font-size:0.8rem; color:rgba(32,30,29,0.6);">PDF, DOCX or XLSX &mdash; up to 10MB total</span>
+            <input type="file" id="file-input" multiple/>
+          </label>
+          <div id="file-list" style="display:flex; flex-direction:column; gap:0; margin-top:1rem; border-top:1px solid rgba(32,30,29,0.4);"></div>
+        </div>
+
+        <div id="step-5" class="step-panel" style="display:none; flex-direction:column; gap:1.2rem;">
+          <div class="form-row">
+            <div><label class="form-label">Full name</label><input class="sb-input" type="text" id="contactName"/></div>
+            <div><label class="form-label">Organisation</label><input class="sb-input" type="text" id="contactOrg"/></div>
+          </div>
+          <div class="form-row">
+            <div><label class="form-label">Email</label><input class="sb-input" type="email" id="contactEmail"/></div>
+            <div><label class="form-label">Phone</label><input class="sb-input" type="tel" id="contactPhone"/></div>
+          </div>
+        </div>
+
+        <div class="form-error" id="submit-error">Something went wrong submitting your opportunity. Please try again or email us directly.</div>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:2.4rem; gap:1rem;">
+          <button type="button" id="back-btn" class="btn btn-outline" style="display:none;">Back</button>
+          <div id="back-spacer"></div>
+          <button type="button" id="next-btn" class="btn btn-primary" disabled>Continue</button>
+          <button type="button" id="submit-btn" class="btn btn-primary" style="display:none;" disabled>Submit for Assessment</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-brand-name">SCALEBRIDGE</div>
+        <p style="font-size:0.88rem; line-height:1.55; margin:0;">Bridging Capital. Building Economic Progress.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <div class="footer-col-title">Company</div>
+          <a href="what-we-do.html" class="footer-link">What We Do</a>
+          <a href="about.html" class="footer-link">About</a>
+          <a href="insights.html" class="footer-link">Insights</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Solutions</div>
+          <a href="infrastructure-and-project-finance.html" class="footer-link">Infrastructure &amp; Project Finance</a>
+          <a href="transaction-structuring-and-capital-mobilisation.html" class="footer-link">Transaction Structuring</a>
+          <a href="for-businesses.html" class="footer-link">For Businesses</a>
+          <a href="for-capital-partners.html" class="footer-link">For Capital Partners</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Get Started</div>
+          <a href="submit-an-opportunity.html" class="footer-link">Submit an Opportunity</a>
+          <a href="become-a-capital-partner.html" class="footer-link">Become a Capital Partner</a>
+          <a href="contact.html" class="footer-link">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Scalebridge Limited. All rights reserved.</span>
+      <span>Registered address &mdash; placeholder</span>
+    </div>
+  </footer>
+<script src="js/config.js"></script>
+<script src="js/forms.js"></script>
+<script>
+(function () {
+  var FINANCING = ['Infrastructure project', 'Contract / LPO', 'Business expansion', 'Working capital', 'Asset / equipment', 'Other'];
+  var AMOUNTS = ['Under ₦100m', '₦100m–₦500m', '₦500m–₦1bn', '₦1bn–₦5bn', '₦5bn+'];
+  var STAGES = ['Concept', 'Contract awarded', 'Contract signed', 'Project underway', 'Revenue generating', 'Expansion'];
+  var LABELS = { 1: 'The Opportunity', 2: 'Repayment & Counterparty', 3: 'Transaction Stage', 4: 'Supporting Documents', 5: 'Contact Details' };
+
+  var state = { step: 1, financingType: '', amount: '', stage: '', files: [] };
+
+  function renderOptions(containerId, list, field) {
+    var el = document.getElementById(containerId);
+    el.innerHTML = '';
+    list.forEach(function (label) {
+      var row = document.createElement('div');
+      row.className = 'opt-row' + (state[field] === label ? ' selected' : '');
+      row.textContent = label;
+      row.addEventListener('click', function () {
+        state[field] = label;
+        renderOptions(containerId, list, field);
+        updateNav();
+      });
+      el.appendChild(row);
+    });
+  }
+
+  function canProceed() {
+    switch (state.step) {
+      case 1: return !!state.financingType && !!state.amount;
+      case 2: return document.getElementById('repayment').value.trim().length > 0 &&
+                     document.getElementById('counterparty').value.trim().length > 0;
+      case 3: return !!state.stage;
+      case 4: return true;
+      case 5: return document.getElementById('contactName').value.trim().length > 0 &&
+                     document.getElementById('contactEmail').value.trim().length > 0;
+      default: return false;
+    }
+  }
+
+  function updateNav() {
+    var ok = canProceed();
+    document.getElementById('next-btn').disabled = !ok;
+    document.getElementById('submit-btn').disabled = !ok;
+  }
+
+  function renderFileList() {
+    var el = document.getElementById('file-list');
+    el.innerHTML = '';
+    state.files.forEach(function (f) {
+      var row = document.createElement('div');
+      row.style.cssText = 'padding:0.7rem 0; border-bottom:1px solid rgba(32,30,29,0.4); font-size:0.88rem;';
+      row.textContent = f.name + ' (' + Math.round(f.size / 1024) + ' KB)';
+      el.appendChild(row);
+    });
+  }
+
+  function goToStep(n) {
+    state.step = n;
+    for (var i = 1; i <= 5; i++) {
+      document.getElementById('step-' + i).style.display = i === n ? (i === 2 || i === 5 ? 'flex' : 'block') : 'none';
+    }
+    document.querySelectorAll('.step-bar-seg').forEach(function (seg) {
+      seg.classList.toggle('active', parseInt(seg.dataset.n, 10) <= n);
+    });
+    document.getElementById('step-label').textContent = 'Step ' + n + ' of 5 — ' + LABELS[n];
+    document.getElementById('back-btn').style.display = n > 1 ? 'inline-block' : 'none';
+    document.getElementById('back-spacer').style.display = n === 1 ? 'block' : 'none';
+    document.getElementById('next-btn').style.display = n < 5 ? 'inline-block' : 'none';
+    document.getElementById('submit-btn').style.display = n === 5 ? 'inline-block' : 'none';
+    updateNav();
+  }
+
+  renderOptions('financing-options', FINANCING, 'financingType');
+  renderOptions('amount-options', AMOUNTS, 'amount');
+  renderOptions('stage-options', STAGES, 'stage');
+  goToStep(1);
+
+  ['repayment', 'counterparty', 'contactName', 'contactOrg', 'contactEmail', 'contactPhone'].forEach(function (id) {
+    document.getElementById(id).addEventListener('input', updateNav);
+  });
+
+  document.getElementById('file-input').addEventListener('change', function (e) {
+    state.files = Array.from(e.target.files || []);
+    renderFileList();
+  });
+
+  document.getElementById('next-btn').addEventListener('click', function () {
+    if (canProceed() && state.step < 5) goToStep(state.step + 1);
+  });
+  document.getElementById('back-btn').addEventListener('click', function () {
+    if (state.step > 1) goToStep(state.step - 1);
+  });
+
+  document.getElementById('submit-btn').addEventListener('click', async function () {
+    if (!canProceed()) return;
+    var btn = this;
+    var errorBox = document.getElementById('submit-error');
+    errorBox.classList.remove('show');
+    btn.disabled = true;
+    btn.textContent = 'Submitting...';
+    try {
+      var attachments = state.files.length ? await sbFilesToBase64(state.files) : [];
+      var payload = {
+        financingType: state.financingType,
+        amount: state.amount,
+        repayment: document.getElementById('repayment').value.trim(),
+        counterparty: document.getElementById('counterparty').value.trim(),
+        stage: state.stage,
+        contactName: document.getElementById('contactName').value.trim(),
+        contactOrg: document.getElementById('contactOrg').value.trim(),
+        contactEmail: document.getElementById('contactEmail').value.trim(),
+        contactPhone: document.getElementById('contactPhone').value.trim(),
+        attachments: attachments
+      };
+      await sbSubmitForm('Opportunities', payload);
+      document.getElementById('submit-form-wrap').style.display = 'none';
+      document.getElementById('submit-success').style.display = 'block';
+      window.scrollTo(0, 0);
+    } catch (err) {
+      errorBox.classList.add('show');
+      errorBox.textContent = (err && err.message === 'NOT_CONFIGURED')
+        ? 'Form backend is not configured yet. Please email us your opportunity directly.'
+        : 'Something went wrong submitting your opportunity. Please try again or email us directly.';
+      btn.disabled = false;
+      btn.textContent = 'Submit for Assessment';
+    }
+  });
+})();
+</script>
+</body>
+</html>
